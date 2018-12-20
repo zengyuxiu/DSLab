@@ -54,7 +54,7 @@ int LocateVex(MGraph &G,VertexType v){
 Status CreateUDN(MGraph &G){
     std::cin >> G.vexnum >> G.arcnum;
     for (int i=0;i<G.vexnum;++i)
-        std::cin >> G.vexs[i];
+        G.vexs[i] = i+1;
     for (int i=0;i<G.vexnum;++i)
         for(int j=0;i<G.vexnum;++j)
             G.arcs[i][j] = {INFINITY,NULL};
